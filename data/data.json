@@ -1,0 +1,473 @@
+{
+  "metrics": {
+    "totalCreators": 30,
+    "activeRate": 0.533,
+    "weeklyOutput": 134,
+    "qualityRate": 0.267,
+    "lostAlert": 11,
+    "changes": {
+      "totalCreators": -0.268,
+      "activeRate": 0.005,
+      "weeklyOutput": -0.002,
+      "qualityRate": 0.005,
+      "lostAlert": -0.006
+    }
+  },
+  "layers": {
+    "labels": [
+      "头部创作者",
+      "腰部创作者",
+      "尾部创作者"
+    ],
+    "percentages": [
+      10,
+      30,
+      60
+    ],
+    "contribution": [
+      42,
+      35,
+      23
+    ],
+    "colors": [
+      "#4a7abf",
+      "#7ab7ff",
+      "#2a3a5a"
+    ]
+  },
+  "trends": {
+    "labels": [
+      "周一",
+      "周二",
+      "周三",
+      "周四",
+      "周五",
+      "周六",
+      "周日"
+    ],
+    "values": [
+      108,
+      106,
+      111,
+      120,
+      130,
+      136,
+      136
+    ]
+  },
+  "alerts": [
+    {
+      "level": "danger",
+      "name": "AI装置-老吴_14",
+      "desc": "连续15天未产出，存在流失风险",
+      "time": "2小时前"
+    },
+    {
+      "level": "warning",
+      "name": "AI装置-老吴_16",
+      "desc": "近3篇互动率下降52%，选题可能疲劳",
+      "time": "5小时前"
+    },
+    {
+      "level": "info",
+      "name": "AI装置-老吴_18",
+      "desc": "新入驻7天，仅发布1篇，建议激活",
+      "time": "1天前"
+    },
+    {
+      "level": "warning",
+      "name": "AI装置-老吴_20",
+      "desc": "内容质量评分连续下降，需关注",
+      "time": "2天前"
+    }
+  ],
+  "creators": [
+    {
+      "id": 1,
+      "name": "AI画师-小林",
+      "level": "head",
+      "weeklyOutput": 8,
+      "interactionRate": 0.09,
+      "status": "active",
+      "lastActive": "2026-06-10"
+    },
+    {
+      "id": 1,
+      "name": "赛博诗人-老张",
+      "level": "head",
+      "weeklyOutput": 10,
+      "interactionRate": 0.089,
+      "status": "risky",
+      "lastActive": "2026-05-31"
+    },
+    {
+      "id": 2,
+      "name": "像素诗人-阿杰",
+      "level": "mid",
+      "weeklyOutput": 4,
+      "interactionRate": 0.052,
+      "status": "active",
+      "lastActive": "2026-06-17"
+    },
+    {
+      "id": 1,
+      "name": "AI影音-老陈",
+      "level": "mid",
+      "weeklyOutput": 4,
+      "interactionRate": 0.044,
+      "status": "active",
+      "lastActive": "2026-05-29"
+    },
+    {
+      "id": 2,
+      "name": "赛博设计-阿凯",
+      "level": "mid",
+      "weeklyOutput": 4,
+      "interactionRate": 0.051,
+      "status": "inactive",
+      "lastActive": "2026-05-28"
+    },
+    {
+      "id": 1,
+      "name": "AI插画-李老师",
+      "level": "mid",
+      "weeklyOutput": 7,
+      "interactionRate": 0.044,
+      "status": "risky",
+      "lastActive": "2026-06-09"
+    },
+    {
+      "id": 2,
+      "name": "AI装置-老吴",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.035,
+      "status": "active",
+      "lastActive": "2026-06-04"
+    },
+    {
+      "id": 1,
+      "name": "数字绘画-小刘",
+      "level": "tail",
+      "weeklyOutput": 2,
+      "interactionRate": 0.026,
+      "status": "active",
+      "lastActive": "2026-06-07"
+    },
+    {
+      "id": 2,
+      "name": "AI动画-阿强",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.022,
+      "status": "active",
+      "lastActive": "2026-06-06"
+    },
+    {
+      "id": 1,
+      "name": "赛博书法-老郑",
+      "level": "tail",
+      "weeklyOutput": 2,
+      "interactionRate": 0.032,
+      "status": "active",
+      "lastActive": "2026-06-03"
+    },
+    {
+      "id": 2,
+      "name": "AI雕塑-小赵",
+      "level": "tail",
+      "weeklyOutput": 3,
+      "interactionRate": 0.022,
+      "status": "active",
+      "lastActive": "2026-06-15"
+    },
+    {
+      "id": 1,
+      "name": "数字拼贴-阿梅",
+      "level": "tail",
+      "weeklyOutput": 3,
+      "interactionRate": 0.026,
+      "status": "risky",
+      "lastActive": "2026-05-29"
+    },
+    {
+      "id": 2,
+      "name": "AI装置-老吴_1",
+      "level": "tail",
+      "weeklyOutput": 2,
+      "interactionRate": 0.032,
+      "status": "inactive",
+      "lastActive": "2026-06-15"
+    },
+    {
+      "id": 1,
+      "name": "AI装置-老吴_14",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.024,
+      "status": "risky",
+      "lastActive": "2026-05-31"
+    },
+    {
+      "id": 2,
+      "name": "AI视觉-阿宁",
+      "level": "head",
+      "weeklyOutput": 9,
+      "interactionRate": 0.069,
+      "status": "active",
+      "lastActive": "2026-06-17"
+    },
+    {
+      "id": 3,
+      "name": "AI装置-老吴_16",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.024,
+      "status": "risky",
+      "lastActive": "2026-05-31"
+    },
+    {
+      "id": 4,
+      "name": "AI视觉-阿宁",
+      "level": "head",
+      "weeklyOutput": 9,
+      "interactionRate": 0.069,
+      "status": "active",
+      "lastActive": "2026-06-17"
+    },
+    {
+      "id": 5,
+      "name": "AI装置-老吴_18",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.024,
+      "status": "risky",
+      "lastActive": "2026-05-31"
+    },
+    {
+      "id": 6,
+      "name": "AI视觉-阿宁",
+      "level": "head",
+      "weeklyOutput": 9,
+      "interactionRate": 0.069,
+      "status": "active",
+      "lastActive": "2026-06-17"
+    },
+    {
+      "id": 7,
+      "name": "AI装置-老吴_20",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.024,
+      "status": "risky",
+      "lastActive": "2026-05-31"
+    },
+    {
+      "id": 8,
+      "name": "AI视觉-阿宁",
+      "level": "head",
+      "weeklyOutput": 9,
+      "interactionRate": 0.069,
+      "status": "active",
+      "lastActive": "2026-06-17"
+    },
+    {
+      "id": 9,
+      "name": "AI装置-老吴_22",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.024,
+      "status": "risky",
+      "lastActive": "2026-05-31"
+    },
+    {
+      "id": 10,
+      "name": "AI视觉-阿宁",
+      "level": "head",
+      "weeklyOutput": 9,
+      "interactionRate": 0.069,
+      "status": "active",
+      "lastActive": "2026-06-17"
+    },
+    {
+      "id": 11,
+      "name": "AI插画-李老师",
+      "level": "mid",
+      "weeklyOutput": 5,
+      "interactionRate": 0.058,
+      "status": "active",
+      "lastActive": "2026-06-03"
+    },
+    {
+      "id": 12,
+      "name": "AI动画-阿强",
+      "level": "tail",
+      "weeklyOutput": 3,
+      "interactionRate": 0.04,
+      "status": "active",
+      "lastActive": "2026-06-06"
+    },
+    {
+      "id": 13,
+      "name": "AI篆刻-老徐_26",
+      "level": "mid",
+      "weeklyOutput": 5,
+      "interactionRate": 0.057,
+      "status": "active",
+      "lastActive": "2026-06-01"
+    },
+    {
+      "id": 14,
+      "name": "数字绘画-小刘",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.031,
+      "status": "risky",
+      "lastActive": "2026-06-15"
+    },
+    {
+      "id": 15,
+      "name": "AI雕塑-小赵",
+      "level": "tail",
+      "weeklyOutput": 2,
+      "interactionRate": 0.035,
+      "status": "risky",
+      "lastActive": "2026-06-11"
+    },
+    {
+      "id": 16,
+      "name": "数字艺术家-老周_29",
+      "level": "head",
+      "weeklyOutput": 9,
+      "interactionRate": 0.085,
+      "status": "active",
+      "lastActive": "2026-06-13"
+    },
+    {
+      "id": 17,
+      "name": "赛博书法-老郑",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.029,
+      "status": "inactive",
+      "lastActive": "2026-06-14"
+    },
+    {
+      "id": 18,
+      "name": "AI篆刻-老徐_31",
+      "level": "mid",
+      "weeklyOutput": 7,
+      "interactionRate": 0.059,
+      "status": "active",
+      "lastActive": "2026-06-12"
+    },
+    {
+      "id": 19,
+      "name": "赛博书法-老郑_32",
+      "level": "tail",
+      "weeklyOutput": 3,
+      "interactionRate": 0.025,
+      "status": "risky",
+      "lastActive": "2026-06-01"
+    },
+    {
+      "id": 20,
+      "name": "AI篆刻-老徐",
+      "level": "mid",
+      "weeklyOutput": 7,
+      "interactionRate": 0.042,
+      "status": "active",
+      "lastActive": "2026-06-09"
+    },
+    {
+      "id": 21,
+      "name": "数字绘画-小刘_34",
+      "level": "tail",
+      "weeklyOutput": 3,
+      "interactionRate": 0.036,
+      "status": "risky",
+      "lastActive": "2026-06-08"
+    },
+    {
+      "id": 22,
+      "name": "AI动画-阿强_35",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.026,
+      "status": "active",
+      "lastActive": "2026-05-29"
+    },
+    {
+      "id": 23,
+      "name": "AI雕塑-小赵_36",
+      "level": "tail",
+      "weeklyOutput": 3,
+      "interactionRate": 0.023,
+      "status": "inactive",
+      "lastActive": "2026-06-08"
+    },
+    {
+      "id": 24,
+      "name": "数字艺术家-老周_37",
+      "level": "head",
+      "weeklyOutput": 14,
+      "interactionRate": 0.063,
+      "status": "active",
+      "lastActive": "2026-06-03"
+    },
+    {
+      "id": 25,
+      "name": "赛博诗人-老张",
+      "level": "head",
+      "weeklyOutput": 13,
+      "interactionRate": 0.069,
+      "status": "risky",
+      "lastActive": "2026-05-28"
+    },
+    {
+      "id": 26,
+      "name": "数字绘画-小刘_39",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.02,
+      "status": "inactive",
+      "lastActive": "2026-06-03"
+    },
+    {
+      "id": 27,
+      "name": "数字拼贴-阿梅_40",
+      "level": "tail",
+      "weeklyOutput": 2,
+      "interactionRate": 0.036,
+      "status": "active",
+      "lastActive": "2026-06-02"
+    },
+    {
+      "id": 28,
+      "name": "AI雕塑-小赵_41",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.024,
+      "status": "active",
+      "lastActive": "2026-06-04"
+    },
+    {
+      "id": 29,
+      "name": "AI动画-阿强_42",
+      "level": "tail",
+      "weeklyOutput": 1,
+      "interactionRate": 0.035,
+      "status": "active",
+      "lastActive": "2026-05-30"
+    },
+    {
+      "id": 30,
+      "name": "AI动画-阿强",
+      "level": "tail",
+      "weeklyOutput": 2,
+      "interactionRate": 0.021,
+      "status": "risky",
+      "lastActive": "2026-06-07"
+    }
+  ]
+}

@@ -1,0 +1,644 @@
+/* ============================================================
+   Step 2: 完整样式 - 中国极客数字游民风
+   ============================================================ */
+
+/* ---------- 全局重置 ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: #0b0d11;
+    color: #e8edf5;
+    min-height: 100vh;
+    padding: 20px;
+    background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(30, 60, 114, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(114, 30, 30, 0.10) 0%, transparent 60%);
+}
+
+/* ---------- 滚动条美化 ---------- */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1e26;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3a5a8a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5a7aaa;
+}
+
+/* ---------- 顶部导航 ---------- */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: rgba(18, 22, 30, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(60, 100, 180, 0.20);
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 24px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #7ab7ff, #4a7abf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+}
+
+.logo-badge {
+    font-size: 11px;
+    background: rgba(60, 100, 180, 0.25);
+    color: #8ab7ff;
+    padding: 2px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(60, 100, 180, 0.25);
+    font-weight: 500;
+    -webkit-text-fill-color: #8ab7ff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 13px;
+    color: #8899bb;
+}
+
+.update-time {
+    color: #aabbdd;
+}
+
+.data-source {
+    background: rgba(40, 60, 100, 0.30);
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(60, 100, 180, 0.15);
+    font-size: 12px;
+}
+
+/* ---------- 主容器 ---------- */
+.dashboard-main {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ---------- KPI 卡片行 ---------- */
+.kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.kpi-card {
+    background: rgba(18, 22, 30, 0.70);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(60, 100, 180, 0.15);
+    border-radius: 14px;
+    padding: 20px 24px;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #3a6aaa, #7ab7ff, #c0392b);
+    opacity: 0.6;
+}
+
+.kpi-card:hover {
+    border-color: rgba(80, 140, 220, 0.40);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(30, 60, 140, 0.20);
+}
+
+.kpi-label {
+    font-size: 13px;
+    color: #8899bb;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+}
+
+.kpi-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #e8edf5;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.kpi-change {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.kpi-change.up {
+    color: #4fc3a1;
+}
+
+.kpi-change.down {
+    color: #ef7a6b;
+}
+
+.kpi-sub {
+    font-size: 12px;
+    color: #667799;
+    margin-top: 4px;
+}
+
+/* ---------- 图表行 ---------- */
+.charts-row {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 16px;
+}
+
+.chart-card {
+    background: rgba(18, 22, 30, 0.70);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(60, 100, 180, 0.12);
+    border-radius: 14px;
+    padding: 20px 22px 18px;
+    transition: border-color 0.25s ease;
+}
+
+.chart-card:hover {
+    border-color: rgba(80, 140, 220, 0.30);
+}
+
+.chart-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #b0c4e8;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+}
+
+.chart-wrapper {
+    position: relative;
+    height: 200px;
+}
+
+.chart-note {
+    font-size: 12px;
+    color: #667799;
+    margin-top: 10px;
+    text-align: right;
+    border-top: 1px solid rgba(60, 100, 180, 0.08);
+    padding-top: 10px;
+}
+
+/* ---------- 底部行 ---------- */
+.bottom-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+}
+
+.alert-card {
+    background: rgba(18, 22, 30, 0.70);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(60, 100, 180, 0.12);
+    border-radius: 14px;
+    padding: 20px 22px 18px;
+}
+
+#alertList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.alert-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: rgba(30, 40, 60, 0.30);
+    border-radius: 10px;
+    border-left: 3px solid #3a6aaa;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.alert-item:hover {
+    background: rgba(40, 55, 85, 0.40);
+}
+
+.alert-item .level {
+    font-size: 16px;
+}
+
+.alert-item .name {
+    font-weight: 500;
+    color: #d0ddf0;
+}
+
+.alert-item .desc {
+    color: #8899bb;
+    font-size: 13px;
+}
+
+.alert-item .time {
+    margin-left: auto;
+    color: #556688;
+    font-size: 12px;
+}
+
+.alert-item.danger {
+    border-left-color: #c0392b;
+}
+
+.alert-item.warning {
+    border-left-color: #e67e22;
+}
+
+.alert-item.info {
+    border-left-color: #3a6aaa;
+}
+
+/* ---------- 快速操作按钮 ---------- */
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.quick-actions button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2a5a8a, #4a7abf);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(40, 80, 160, 0.30);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(40, 80, 160, 0.45);
+}
+
+.btn-secondary {
+    background: rgba(40, 60, 100, 0.25);
+    color: #b0c4e8;
+    border: 1px solid rgba(60, 100, 180, 0.15);
+}
+
+.btn-secondary:hover {
+    background: rgba(50, 80, 140, 0.30);
+    border-color: rgba(80, 140, 220, 0.30);
+}
+
+/* ============================================================
+   新增：表格样式
+   ============================================================ */
+
+.table-row {
+    margin-top: 4px;
+}
+
+.table-card {
+    background: rgba(18, 22, 30, 0.70);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(60, 100, 180, 0.12);
+    border-radius: 14px;
+    padding: 20px 22px 18px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.table-filters {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.table-filters select {
+    background: rgba(30, 40, 60, 0.50);
+    color: #b0c4e8;
+    border: 1px solid rgba(60, 100, 180, 0.20);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.table-filters select:hover,
+.table-filters select:focus {
+    border-color: rgba(80, 140, 220, 0.50);
+}
+
+.table-filters select option {
+    background: #1a1e26;
+    color: #e8edf5;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(60, 100, 180, 0.06);
+}
+
+#creatorTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#creatorTable thead {
+    background: rgba(30, 40, 60, 0.30);
+}
+
+#creatorTable th {
+    text-align: left;
+    padding: 10px 14px;
+    color: #8899bb;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#creatorTable td {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(60, 100, 180, 0.06);
+    color: #d0ddf0;
+}
+
+#creatorTable tbody tr:hover {
+    background: rgba(40, 60, 100, 0.15);
+}
+
+#creatorTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-badge.active {
+    background: rgba(79, 195, 161, 0.15);
+    color: #4fc3a1;
+    border: 1px solid rgba(79, 195, 161, 0.20);
+}
+
+.status-badge.risky {
+    background: rgba(230, 126, 34, 0.15);
+    color: #e67e22;
+    border: 1px solid rgba(230, 126, 34, 0.20);
+}
+
+.status-badge.inactive {
+    background: rgba(190, 60, 50, 0.15);
+    color: #ef7a6b;
+    border: 1px solid rgba(190, 60, 50, 0.20);
+}
+
+.level-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.level-badge.head {
+    background: rgba(74, 122, 191, 0.20);
+    color: #7ab7ff;
+    border: 1px solid rgba(74, 122, 191, 0.20);
+}
+
+.level-badge.mid {
+    background: rgba(60, 100, 180, 0.12);
+    color: #8899bb;
+    border: 1px solid rgba(60, 100, 180, 0.12);
+}
+
+.level-badge.tail {
+    background: rgba(40, 50, 70, 0.30);
+    color: #667799;
+    border: 1px solid rgba(40, 50, 70, 0.20);
+}
+
+.table-footer {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #667799;
+    text-align: right;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 1024px) {
+    .charts-row {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 18px;
+    }
+
+    .header-right {
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+
+    .kpi-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .kpi-card {
+        padding: 14px 16px;
+    }
+
+    .kpi-value {
+        font-size: 24px;
+    }
+
+    .chart-wrapper {
+        height: 160px;
+    }
+
+    .quick-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .quick-actions button {
+        flex: 1;
+        min-width: 80px;
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .table-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .table-filters {
+        flex-wrap: wrap;
+    }
+
+    .table-filters select,
+    .table-filters button {
+        flex: 1;
+        min-width: 80px;
+    }
+
+    #creatorTable {
+        font-size: 12px;
+    }
+
+    #creatorTable th,
+    #creatorTable td {
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kpi-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .kpi-card {
+        padding: 12px 14px;
+    }
+
+    .kpi-value {
+        font-size: 20px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .logo-badge {
+        font-size: 10px;
+        padding: 1px 8px;
+    }
+}
+
+/* ============================================================
+   视图切换按钮样式
+   ============================================================ */
+
+.view-switcher {
+    display: flex;
+    gap: 4px;
+    background: rgba(30, 40, 60, 0.40);
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.view-btn {
+    padding: 4px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: transparent;
+    color: #8899bb;
+    font-family: inherit;
+}
+
+.view-btn:hover {
+    color: #b0c4e8;
+}
+
+.view-btn.active {
+    background: rgba(74, 122, 191, 0.30);
+    color: #7ab7ff;
+    box-shadow: 0 0 20px rgba(74, 122, 191, 0.10);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .view-switcher {
+        order: -1;
+    }
+}
